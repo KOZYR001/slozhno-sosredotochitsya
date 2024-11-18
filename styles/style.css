@@ -1,5 +1,124 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  min-width: 375px;
+  background-image: var(--bg-cover-image);
+  background-color: var(--bg-color, #000028);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    block-size: 100vh;
+    min-block-size: 668px;
+    position: relative;
+    padding-inline: 10px;
+    padding-block: 10px;
+    margin-block-end: 40px;
+}
+
+@media (width >= 768px) {
+    .header {
+        padding-inline-start: 0;
+    }
+}
+
+
+@media (width >= 1024px) {
+    .header {
+        padding-inline-end: 2vw;
+        padding-block-start: 2.2vh;
+    }
+}
+
+.decorated-zone::after {
+    content: "";
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+    border-left: 1px solid var(--decoration-color, #FF0070);
+    border-bottom: 1px solid var(--decoration-color, #FF0070);
+    block-size: 25px;
+    inline-size: 25px;
+}
+
+.header__theme-menu {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-block-end: 1vh;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+}
+
+.header__rec {
+    color: var(--bg-accent-color, #FF0070);
+    font-family: var(--main-font, monospace);
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    right: 20px;
+}
+
+.header__rec::after {
+    content: "";
+    box-shadow: 0 0 4px 2px var(--bg-accent-color, #FF0070);
+    background-color: 0 0 4px 2px var(--bg-accent-color, #FF0070);
+    display: inline-block;
+    border-radius: 50%;
+    inline-size: 9px;
+    block-size: 9px;
+}
+
+.header__title {
+    color: var(--text-color, #DB00FF );
+    font-weight: 700;
+    line-height: 95.7%;
+    font-family: var(--main-font, monospace);
+    text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-block-end: 55px;
+}
+
+.title-decor {
+    font-family: var(--main-font, monospace);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 130%;
+    align-self: start;
+    color: var(--text-two-color);
+}
+
+.header__theme-menu-item
+
+.header__theme-menu-button {
+    font-size: 18px;
+    text-transform: lowercase;
+    display: block;
+    color: var(--button-color);
+    font-family: var(--main-font, monospace);
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+
+.header__theme-menu-button_active {
+    pointer-events: none;
+}
+
+
+.header__theme-menu-button_type_auto  .footer {
+    block-size: 100vh;
+    min-block-size: 668px;
 }
