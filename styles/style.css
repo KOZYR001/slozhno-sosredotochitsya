@@ -13,6 +13,7 @@
 .header {
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
+    grid-template-rows: 1fr min-content 1fr;
     block-size: 100vh;
     min-block-size: 668px;
     position: relative;
@@ -21,27 +22,13 @@
     margin-block-end: 40px;
 }
 
-@media (width >= 768px) {
-    .header {
-        padding-inline-start: 0;
-    }
-}
-
-
-@media (width >= 1024px) {
-    .header {
-        padding-inline-end: 2vw;
-        padding-block-start: 2.2vh;
-    }
-}
 
 .decorated-zone::after {
     content: "";
     bottom: 10px;
     left: 10px;
     position: absolute;
-    border-left: 1px solid var(--decoration-color, #FF0070);
-    border-bottom: 1px solid var(--decoration-color, #FF0070);
+    
     block-size: 25px;
     inline-size: 25px;
 }
@@ -54,9 +41,11 @@
 }
 
 .header__theme-menu-list {
-    display: flex;
-    flex-direction:column;
+    display: grid;
+    grid-auto-flow: row;
     gap: 10px;
+    grid-column-start: 2;
+    grid-column-end: auto;
 }
 
 .header__rec {
@@ -79,16 +68,19 @@
     border-radius: 50%;
     inline-size: 9px;
     block-size: 9px;
+    
 }
 
 .header__title {
-    color: var(--text-color, #DB00FF );
+    color: #DB00FF;
     font-weight: 700;
-    line-height: 95.7%;
+    line-height: 129.53px;
     font-family: var(--main-font, monospace);
     text-shadow: 4px 4px 0 var(--accent-color, #FF0070);
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    margin-block-end: 55px;
+    font-size: 157px;
+    grid-row-start: 2;
+    width: 759px;
+    height: 130px;
 }
 
 .title-decor {
@@ -96,8 +88,15 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 130%;
-    align-self: start;
-    color: var(--text-two-color);
+    color: var(--text-two-color, #000);
+    grid-column-start: 3;
+    grid-column-end: auto;
+    grid-row-start: 3;
+    grid-row-end: auto;
+    background-color: #FF0070;
+    height: 70px;
+    width: 491px;
+    justify-content: end;
 }
 
 .header__theme-menu-item
@@ -121,4 +120,45 @@
 .header__theme-menu-button_type_auto  .footer {
     block-size: 100vh;
     min-block-size: 668px;
+}
+
+.section__title {
+    color: var(--accent-color, #FF0070);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.4px;
+    font-family: var(--main-font, monospace);
+}
+
+.title-decor {
+    color: var(--bg-color, #000028);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.4px;
+    font-family: var(--main-font, monospace);
+    background-color: var(--accent-color, #FF0070);
+}
+
+.section-title__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    font-family: var(--main-font, monospace);
+    color: var(--link-focus-color, #F1B2CE);
+}
+
+.title-decor-two {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    font-family: var(--main-font, monospace);
+    color: var(--bg-color, #000028);
+}
+
+.footer__title {
+    font-weight: 700;
+    font-size: 157px;
+    line-height: 129.53px;
+    color: var(--text-color, #DB00FF);
+    box-shadow: 0 0 4px 2px var(--bg-accent-color, #FF0070);
 }
