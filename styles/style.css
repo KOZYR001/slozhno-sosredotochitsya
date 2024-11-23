@@ -25,26 +25,28 @@
 
 
 
-.decorated-zone::after {
-    content: "";
-    bottom: 10px;
-    left: 10px;
-    position: absolute;
-    border-block-start: 1px solid var(--decoration-color, #FF0070);
-    border-inline-end: 1px solid var(--decoration-color, #FF0070);
-    block-size: 25px;
-    inline-size: 25px;
-}
-
-.decoration-zone::before {
+.decorated-zone {
+    position:relative;
+    &::before {
     content: "";
     right: 10px;
     top: 10px;
     position: absolute;
-    border-block-start: 1px solid var(--decoration-color, #FF0070);
-    border-inline-end: 1px solid var(--decoration-color, #FF0070);
-    block-size: 25px;
-    inline-size: 25px;
+    border-top: 1px solid var(--decoration-color, #FF0070);
+    border-right: 1px solid var(--decoration-color, #FF0070);
+    width: 25px;
+    height: 25px;
+    }
+    &::after {
+    content: "";
+    left: 10px;
+    bottom: 10px;
+    position: absolute;
+    border-left: 1px solid var(--decoration-color, #FF0070);
+    border-bottom: 1px solid var(--decoration-color, #FF0070);
+    width: 25px;
+    height: 25px;
+    }
 }
 
 .header__theme-menu {
@@ -207,19 +209,19 @@ article {
 .section-why {
     gap: 20px;
     display: grid;
-    grid-template-columns: minmax(min-content, max-content);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .section-what {
     gap: 20px;
     display: grid;
-    grid-template-rows: minmax(min-content, max-content);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .section-how {
     gap: 20px;
     display: grid;
-    grid-template-rows: minmax(min-content, max-content);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .section__title {
