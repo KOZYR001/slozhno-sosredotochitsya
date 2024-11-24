@@ -1,8 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  min-width: 375px;
-  max-width: 1400px;
   background-image: var(--bg-cover-image);
   background-color: var(--bg-color, #000028);
   background-repeat: no-repeat;
@@ -17,8 +15,8 @@
     block-size: 100vh;
     min-block-size: 668px;
     position: relative;
-    padding-block: 10px;
     margin-block-end: 40px;
+    padding-block: 10px;
     align-items: center;
 }
 
@@ -171,14 +169,15 @@
 
 .footer__title {
     font-weight: 700;
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    line-height: 129.53px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    line-height: 95.7px;
     color: var(--text-color, #DB00FF);
     font-family: var(--main-font, monospace);
 }
 
 .section-article__list {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap:20px;
 }
 
@@ -186,6 +185,7 @@
     gap: 10px;
     display: flex;
     flex-direction: column;
+    list-style: none;
 }
 
 .main {
@@ -212,8 +212,7 @@ article {
 .section-what {
     gap: 20px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(315px, 1fr));
-
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .section-how {
@@ -249,15 +248,60 @@ article {
 }
 
 .section-images {
-    gap: 10px;
     display: grid;
     grid-template-rows: minmax(min-content, max-content);
+    gap: 20px;
+}
+
+.section-image__item {
+    display: grid;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+}
+
+.sunset {
+    grid-area: sunset;
+}
+
+.tape {
+    grid-area: tape;
+}
+
+.ice-cream {
+    grid-area: ice-cream;
+}
+
+.books {
+    grid-area: books;
+}
+
+.street {
+    grid-area: street;
 }
 
 .img-item {
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
-    object-position: center;
+    display: grid;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+    gap:23px;
+}
+
+.footer {
+    position: relative;
+    min-block-size: 668px;
+    block-size: 100vh;
+    place-items: center;
+    display: grid;
+    margin-block-start: 36px;
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
 }
 
