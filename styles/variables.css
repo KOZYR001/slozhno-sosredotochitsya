@@ -7,6 +7,7 @@
   --bg-cover-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --main-font: IBM Plex Mono, monospace;
+  --main-text-color: #FF0070;
   --accent-color: #FF0070;
   --text-color: #DB00FF;
   --text-two-color: #000;
@@ -24,6 +25,9 @@
   --link-focus-color: #F1B2CE;
   --link-hover-color: #F1B2CE;
   --gap: 20px;
+  --footer-color: #DB00FF;
+  --footer-shadow: #FF0070;
+  --section-title-color: #f1b2ce;
 }
 
 @media (width < 768px) {
