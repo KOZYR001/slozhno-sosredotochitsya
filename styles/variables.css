@@ -23,4 +23,11 @@
   --link-shadow-color: #FF0070;
   --link-focus-color: #F1B2CE;
   --link-hover-color: #F1B2CE;
+  --gap: 20px;
+}
+
+@media (width < 768px) {
+  :root {
+    --gap: 10px;
+  }
 }
