@@ -28,6 +28,9 @@
   --footer-color: #DB00FF;
   --footer-shadow: #FF0070;
   --section-title-color: #f1b2ce;
+  --subtitle-color: #000028;
+  --section-title__text: #F1B2CE;
+  --title-img: #000028;
 }
 
 @media (width < 768px) {
