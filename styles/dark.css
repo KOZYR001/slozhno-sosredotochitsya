@@ -38,7 +38,7 @@
 }
 
 .theme_dark .header__rec {
-  display: inline-block;
+  display: flex;
 }
 
 @media (prefers-color-scheme: dark) {
