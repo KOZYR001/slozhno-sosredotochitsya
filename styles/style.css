@@ -220,7 +220,7 @@
     font-size: 18px;
     line-height: 23.4px;
     font-family: var(--main-font, monospace);
-    color: var, (--subtitle-color, #000028);
+    color: var(--subtitle-color, #000028);
     background-color: var(--bg-accent-color, #FF0070);
 }
 
