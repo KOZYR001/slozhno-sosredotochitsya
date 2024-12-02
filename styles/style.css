@@ -277,7 +277,6 @@
         line-height: 23.4px;
         font-family: var(--main-font, monospace);
         color: var(--section-title__text, #F1B2CE);
-        margin-bottom: 20px;
     }
 }
 
@@ -303,6 +302,14 @@
     gap: 0;
 }
 
+@media (width >= 768px) {
+    .section-article__list-why {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
 .section-article__list-causes {
     display: flex;
     flex-direction: column;
@@ -313,7 +320,6 @@
     .section-article__list-causes {
         display: flex;
         flex-direction: column;
-        gap: 0;
     }
 }
 
@@ -346,8 +352,8 @@
 
 @media (width >= 768px) {
     .main {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        margin-block-start: 60px;
+        gap: 80px;
     }
 }
 
@@ -438,7 +444,7 @@ article {
         font-size: 18px;
         font-family: var(--main-font, monospace);
         line-height: 23.4px;
-        max-width: 400px;
+        min-width: 315px;
     }
 }
 
@@ -566,7 +572,7 @@ article {
     .footer {
         padding-inline-start: 20px;
         padding-inline-end: 20px;
-        margin-block-start: 36px;
+        margin-block-start: 60px;
     }
 }
 
